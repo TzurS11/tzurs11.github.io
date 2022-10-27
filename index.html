@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Title of the document</title>
-</head>
+  <head>
+    <title>Title of the document</title>
+    <style>
+        .test{
+            background-color:black;
+            width: 100px;
+            height:100px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+            transition: border-radius 1s,width 1s,height 1s,background-color 1s;
+        }
+        .test:hover{
+            border-radius: 250px;
+            width: 500px;
+            height:500px;
+            background-color: red;
+        }
+    </style>
+  </head>
 
-<body>
-<p>something here<p>
-</body>
-
+  <body>
+    <div class="test" >
+  </body>
 </html>
