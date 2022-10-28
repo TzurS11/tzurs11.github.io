@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="index.js" defer></script>
+
     <title>Deadass website</title>
     <meta content="Deadass website" property="og:title" />
-    <meta content="Dumbass website i have created for no reason. gonna work on it when ill get better at html and css" property="og:description" />
+    <meta
+      content="Dumbass website i have created for no reason. gonna work on it when ill get better at html and css"
+      property="og:description"
+    />
     <meta content="https://tzurs11.github.io/" property="og:url" />
-    <meta content="https://avatars.githubusercontent.com/u/90769470?v=4" property="og:image" />
+    <meta
+      content="https://avatars.githubusercontent.com/u/90769470?v=4"
+      property="og:image"
+    />
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-    <style>
-        .test{
-            background-color:black;
-            width: 100px;
-            height:100px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: auto;
-            margin-bottom: auto;
-            transition: border-radius 1s,width 1s,height 1s,background-color 1s;
-        }
-        .test:hover{
-            border-radius: 250px;
-            width: 500px;
-            height:500px;
-            background-color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div class="test" >
+    <header>
+      <p class="title">TzurS11</p>
+      <a href="https://github.com/TzurS11" target="_blank"
+        ><img class="icon github" src="assets/github.png"
+      /></a>
+      <a
+        href="https://www.youtube.com/channel/UCMZBKwk279RKY99DQXY_IWA?sub_confirmation=1"
+        target="_blank"
+        ><img class="icon youtube" src="assets/youtube.png"
+      /></a>
+    </header>
+    <div id="maps" class="maps">
+      <p class="title" id="maps_title">maps</p>
+    </div>
   </body>
 </html>
