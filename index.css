@@ -2,6 +2,7 @@ body {
   margin: 0;
   background-color: lightgray;
   /* user-select: none; */
+  filter: blur(1000px);
 }
 
 p {
@@ -51,7 +52,7 @@ header > a > .icon:active {
 table {
   text-align: center;
   border-style: solid;
-  border-color:black;
+  border-color: black;
   /* user-select: none; */
   margin-left: 20px;
   margin-top: 0px;
@@ -61,6 +62,15 @@ table {
 }
 
 .map-title {
+  margin-bottom: 0px;
+  font-size: 100px;
+  margin-left: 20px;
+  letter-spacing: 10px;
+}
+
+.discord-title {
+  letter-spacing: 10px;
+  margin-top: 20px;
   margin-bottom: 0px;
   font-size: 100px;
   margin-left: 20px;
