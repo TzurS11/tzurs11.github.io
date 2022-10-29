@@ -1,9 +1,9 @@
-function onNamePress() {
-  colorChange = setInterval(function () {
-    document.body.style.backgroundColor =
-      "#" + ((Math.random() * 0xffffff) << 0).toString(16);
-  }, 10);
-}
+// function onNamePress() {
+//   colorChange = setInterval(function () {
+//     document.body.style.backgroundColor =
+//       "#" + ((Math.random() * 0xffffff) << 0).toString(16);
+//   }, 10);
+// }
 fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
   .then((req) => req.json())
   .then((res) => {
