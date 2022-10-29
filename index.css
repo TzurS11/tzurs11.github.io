@@ -1,8 +1,16 @@
 body {
   margin: 0;
+  background-color: lightgray;
+  /* user-select: none; */
 }
 
 p {
+  margin: 0px;
+  font-family: "Bebas Neue";
+}
+
+a {
+  margin: 0px;
   font-family: "Bebas Neue";
 }
 
@@ -40,33 +48,44 @@ header > a > .icon:active {
   top: 15px;
 }
 
-.maps > .title {
-  letter-spacing: 10px;
-  /* position: absolute; */
-  left: 25px;
+table {
+  text-align: center;
+  border-style: solid;
+  border-color:black;
+  /* user-select: none; */
+  margin-left: 20px;
+  margin-top: 0px;
+  font-family: "Bebas Neue";
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.map-title {
+  margin-bottom: 0px;
   font-size: 100px;
-  margin: 0px;
   margin-left: 20px;
 }
 
-.bold {
-  font-weight: bolder;
+td,
+th {
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.map-list {
-  letter-spacing: 0px;
-  margin: 0px;
-  margin-left: 40px;
+tr:nth-child(odd) {
+  background-color: #c0c0c0;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.maps {
   font-size: 30px;
-  top: 130px;
-  cursor: pointer;
-  text-decoration: none;
+}
+
+.link {
   text-decoration: none;
   color: black;
-  transition: margin-left 0.1s;
-}
-
-.map-list:hover {
-  margin-left: 45px;
-  text-decoration: none;
 }
