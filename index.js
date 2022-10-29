@@ -65,3 +65,14 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
     title.style.cursor = "pointer";
     title.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
   });
+
+setInterval(function () {
+  fetch(
+    "https://api.beatsaver.com/maps/latest?automapper=true&sort=LAST_PUBLISHED"
+  )
+    .then((req) => req.json())
+    .then((res) => {
+      document.getElementById("latestmap").src =
+        res.docs[0].versions[res.docs[0].versions.length - 1].coverURL;
+    });
+}, 1000);

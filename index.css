@@ -19,18 +19,19 @@ a {
 }
 
 header {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   z-index: 999;
   position: sticky;
   top: 0;
   user-select: none;
-  background-color: black;
+  /* background-color: black; */
   color: white;
 }
 
 header > .title {
+  position: relative;
+  display: block;
   text-align: center;
-  margin: 0px;
-  letter-spacing: 0px;
   font-size: 70px;
   transition: letter-spacing 1s;
 }
@@ -39,20 +40,45 @@ header > .title:hover {
 }
 header > a > .icon {
   position: absolute;
-  top: 7px;
+  margin-top: 10px;
+  width: 70px;
 }
 
 header > a > .icon.github {
-  width: 70px;
   left: 10px;
 }
 header > a > .icon.youtube {
-  width: 70px;
   left: 90px;
 }
 
 header > a > .icon:active {
   top: 15px;
+}
+
+.sub-title {
+  user-select: none;
+  font-size: 50px;
+  margin-left: 10px;
+  letter-spacing: 10px;
+}
+
+.sub-title.beatsaber {
+  cursor: default;
+}
+
+.sub-title.discord {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.scaleArrow {
+  font-size: 25px;
+  position: relative;
+  bottom: 10px;
 }
 
 table {
@@ -66,29 +92,6 @@ table {
   font-weight: bold;
   border-collapse: collapse;
   width: 100%;
-}
-
-.map-table-title {
-
-  position: relative;
-  bottom: 10px;
-  left:10px;
-}
-
-.coverImage {
-  border-radius: 15px;
-  width: 50px;
-  position: relative;
-  top: 5px;
-}
-
-.discord-title {
-  cursor: pointer;
-  letter-spacing: 10px;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  font-size: 50px;
-  margin-left: 10px;
 }
 
 td,
@@ -106,25 +109,29 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+.coverImage {
+  border-radius: 15px;
+  width: 50px;
+  position: relative;
+  top: 5px;
+}
+
+.map-table-title {
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+}
+
 .maps {
   font-size: 25px;
 }
 
-.map-title {
-  cursor: default;
-  user-select: none;
-  font-size: 50px;
-  margin-left: 10px;
-  letter-spacing: 10px;
-}
-
-.link {
-  text-decoration: none;
-  color: black;
-}
-
-.scaleArrow {
-  font-size: 25px;
-  position: relative;
-  bottom: 10px;
+.footer {
+  bottom: 0;
+  right: 0;
+  font-size: 10px;
+  color: white;
+  position: fixed;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
