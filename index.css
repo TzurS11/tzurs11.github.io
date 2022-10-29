@@ -41,7 +41,7 @@ header > .title:hover {
 header > a > .icon {
   position: absolute;
   margin-top: 10px;
-  top:0;
+  top: 0;
   width: 70px;
 }
 
@@ -133,11 +133,10 @@ tr:nth-child(even) {
   font-size: 10px;
   color: white;
   position: fixed;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 
-
-#latestmap{
+#latestmap {
   margin-left: 10px;
 }
