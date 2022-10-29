@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <script src="index.js" defer></script>
-
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/90769470?v=4" />
     <title>Deadass website</title>
     <meta content="Deadass website" property="og:title" />
     <meta
@@ -37,7 +37,9 @@
         ><img class="icon youtube" src="assets/youtube.png"
       /></a>
     </header>
-    <p class="map-title">beat saber maps</p>
+    <p id="map-title" class="map-title" onclick="tableMap()" title="Show maps">
+      Beat saber maps <span class="scaleArrow">►</span>
+    </p>
     <table id="map-table" class="map-table">
       <tr style="font-size: 40px; letter-spacing: 10px">
         <th>Name</th>
