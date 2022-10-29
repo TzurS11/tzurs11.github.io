@@ -8,13 +8,13 @@ body {
 
 p {
   margin: 0px;
-  font-family: "Roboto";
+  font-family: "Bebas Neue";
   font-weight: bold;
 }
 
 a {
   margin: 0px;
-  font-family: "Roboto";
+  font-family: "Bebas Neue";
   font-weight: bold;
 }
 
@@ -62,15 +62,17 @@ table {
   /* border-color: black; */
   margin-right: auto;
   margin-left: auto;
-  font-family: "Roboto";
+  font-family: "Bebas Neue";
   font-weight: bold;
   border-collapse: collapse;
   width: 100%;
 }
 
 .map-table-title {
+
   position: relative;
-  bottom: 15px;
+  bottom: 10px;
+  left:10px;
 }
 
 .coverImage {
@@ -78,16 +80,6 @@ table {
   width: 50px;
   position: relative;
   top: 5px;
-}
-
-.map-title {
-  cursor: default;
-  user-select: none;
-  margin-bottom: 0px;
-  font-size: 50px;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  letter-spacing: 10px;
 }
 
 .discord-title {
@@ -115,7 +107,15 @@ tr:nth-child(even) {
 }
 
 .maps {
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.map-title {
+  cursor: default;
+  user-select: none;
+  font-size: 50px;
+  margin-left: 10px;
+  letter-spacing: 10px;
 }
 
 .link {
@@ -126,5 +126,5 @@ tr:nth-child(even) {
 .scaleArrow {
   font-size: 25px;
   position: relative;
-  bottom: 5px;
+  bottom: 10px;
 }
