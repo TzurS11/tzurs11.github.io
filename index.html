@@ -22,8 +22,10 @@
 
     <!-- fonts -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -40,17 +42,14 @@
         ><img class="icon youtube" src="assets/youtube.png"
       /></a>
     </header>
-    <p id="map-title" class="map-title" onclick="tableMap()" title="Show maps">
-      Beat saber maps <span class="scaleArrow">►</span>
-    </p>
+    <p id="map-title" class="map-title" title="Show maps">Loading maps</p>
     <table id="map-table" class="map-table" style="display: none">
-      <tr style="font-size: 40px; letter-spacing: 10px">
+      <tr style="font-size: 30px; font-weight: bolder; letter-spacing: 0px">
         <th>Name</th>
-        <th>Upvotes</th>
-        <th>Downvotes</th>
-        <th>id</th>
+        <th>Votes Ratio</th>
+        <th>ID</th>
       </tr>
     </table>
-    <p class="discord-title">Discord projects</p>
+    <p class="discord-title">Discord Projects</p>
   </body>
 </html>

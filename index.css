@@ -3,17 +3,19 @@ body {
   margin: 0;
   background-color: lightgray;
   /* user-select: none; */
-  filter: blur(1000px);
+  /* filter: blur(1000px); */
 }
 
 p {
   margin: 0px;
-  font-family: "Bebas Neue";
+  font-family: "Roboto";
+  font-weight: bold;
 }
 
 a {
   margin: 0px;
-  font-family: "Bebas Neue";
+  font-family: "Roboto";
+  font-weight: bold;
 }
 
 header {
@@ -37,7 +39,7 @@ header > .title:hover {
 }
 header > a > .icon {
   position: absolute;
-  top: 10px;
+  top: 7px;
 }
 
 header > a > .icon.github {
@@ -55,43 +57,46 @@ header > a > .icon:active {
 
 table {
   display: none;
-  /* display: inline-table; */
   text-align: left;
   /* border-style: solid; */
   /* border-color: black; */
   margin-right: auto;
   margin-left: auto;
-  font-family: "Bebas Neue";
+  font-family: "Roboto";
+  font-weight: bold;
   border-collapse: collapse;
   width: 100%;
 }
 
 .map-table-title {
   position: relative;
-  bottom: 35px;
+  bottom: 15px;
 }
 
 .coverImage {
-  width: 100px;
+  border-radius: 15px;
+  width: 50px;
   position: relative;
   top: 5px;
 }
 
 .map-title {
-  cursor: pointer;
+  cursor: default;
   user-select: none;
   margin-bottom: 0px;
-  font-size: 100px;
-  margin-left: 20px;
+  font-size: 50px;
+  margin-left: 10px;
+  margin-bottom: 5px;
   letter-spacing: 10px;
 }
 
 .discord-title {
+  cursor: pointer;
   letter-spacing: 10px;
   margin-top: 20px;
   margin-bottom: 0px;
-  font-size: 100px;
-  margin-left: 20px;
+  font-size: 50px;
+  margin-left: 10px;
 }
 
 td,
@@ -110,7 +115,7 @@ tr:nth-child(even) {
 }
 
 .maps {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .link {
@@ -119,7 +124,7 @@ tr:nth-child(even) {
 }
 
 .scaleArrow {
-  font-size: 50px;
+  font-size: 25px;
   position: relative;
-  bottom: 20px;
+  bottom: 5px;
 }
