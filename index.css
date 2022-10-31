@@ -156,15 +156,8 @@ tr:nth-child(even) {
   -webkit-text-stroke-color: black;
 }
 
-.discord-bots {
-  margin-left: 20px;
-}
-
 .bot-container {
-  /* background-size:cover;
-  background-repeat: no-repeat;
-  background-image: url("https://eu.cdn.beatsaver.com/e45b69a9428505e93f73f1bdc43909d43fc844e3.jpg");
-  position: absolute; */
+  margin-left: 20px;
   overflow: auto;
   display: inline-block;
   border-radius: 10px;
@@ -173,24 +166,12 @@ tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
 }
-
-.bot-container.playground {
-  /* left: 400px; */
-  float: right;
-  margin-left: 20px;
-}
-
-.bot-container.ytcord {
-  float: left;
-}
-
 .bot-title {
   white-space: nowrap;
   font-size: 35px;
 }
 
 .bot-description {
-  /* margin-left: 10px; */
   font-size: 20px;
 }
 
