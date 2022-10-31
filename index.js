@@ -2,6 +2,7 @@ function tableMap() {
   let table = document.getElementById("map-table");
   let tableTitle = document.getElementById("map-title");
   if (table.style.display === "none") {
+    hideSubs();
     table.style.display = "inline-table";
     tableTitle.title = "Hide maps";
     tableTitle.innerHTML = 'Beat Saber Maps <span class="scaleArrow">▼</span>';
@@ -10,6 +11,34 @@ function tableMap() {
     tableTitle.title = "Show maps";
     tableTitle.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
   }
+}
+
+function discordBots() {
+  let projects = document.getElementById("discord-bots");
+  let projectsTitle = document.getElementById("discord-projects-title");
+  if (projects.style.display === "none") {
+    hideSubs();
+    projects.style.display = "inline-block";
+    projectsTitle.title = "Hide projects";
+    projectsTitle.innerHTML = 'Discord Bots <span class="scaleArrow">▼</span>';
+  } else {
+    projects.style.display = "none";
+    projectsTitle.title = "Show projects";
+    projectsTitle.innerHTML = 'Discord Bots <span class="scaleArrow">►</span>';
+  }
+}
+
+function hideSubs() {
+  let table = document.getElementById("map-table");
+  let tableTitle = document.getElementById("map-title");
+  table.style.display = "none";
+  tableTitle.title = "Show maps";
+  tableTitle.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
+  let projects = document.getElementById("discord-bots");
+  let projectsTitle = document.getElementById("discord-projects-title");
+  projects.style.display = "none";
+  projectsTitle.innerHTML = 'Discord Bots <span class="scaleArrow">►</span>';
+  projectsTitle.title = "Show projects";
 }
 
 function calcRating(upvotes, downvotes, rounding = 1) {
@@ -65,14 +94,3 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
     title.style.cursor = "pointer";
     title.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
   });
-
-setInterval(function () {
-  fetch(
-    "https://api.beatsaver.com/maps/latest?automapper=true&sort=LAST_PUBLISHED"
-  )
-    .then((req) => req.json())
-    .then((res) => {
-      document.getElementById("latestmap").src =
-        res.docs[0].versions[res.docs[0].versions.length - 1].coverURL;
-    });
-}, 1000);

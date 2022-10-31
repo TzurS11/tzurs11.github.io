@@ -1,7 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
-  overflow: scroll;
+  /* overflow: scroll; */
   margin: 0;
-  background-color: lightgray;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    180deg,
+    hsl(195, 73%, 40%),
+    hsl(195, 73%, 40%),
+    /* hsl(240, 40%, 40%), */ hsl(240, 10%, 65%)
+  );
   /* user-select: none; */
   /* filter: blur(1000px); */
 }
@@ -19,7 +30,11 @@ a {
 }
 
 header {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    180deg,
+    hsl(195, 90%, 50%),
+    rgba(0, 0, 0, 0)
+  );
   z-index: 999;
   position: sticky;
   top: 0;
@@ -100,14 +115,18 @@ th {
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
 }
 
 tr:nth-child(odd) {
-  background-color: #c0c0c0;
+  background-color: rgba(192, 192, 192, 0.5);
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: rgba(221, 221, 221, 0.5);
 }
 
 .coverImage {
@@ -137,6 +156,47 @@ tr:nth-child(even) {
   -webkit-text-stroke-color: black;
 }
 
-#latestmap {
+.discord-bots {
+  margin-left: 20px;
+}
+
+.bot-container {
+  /* background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("https://eu.cdn.beatsaver.com/e45b69a9428505e93f73f1bdc43909d43fc844e3.jpg");
+  position: absolute; */
+  overflow: auto;
+  display: inline-block;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+
+.bot-container.playground {
+  /* left: 400px; */
+  float: right;
+  margin-left: 20px;
+}
+
+.bot-container.ytcord {
+  float: left;
+}
+
+.bot-title {
+  white-space: nowrap;
+  font-size: 35px;
+}
+
+.bot-description {
+  /* margin-left: 10px; */
+  font-size: 20px;
+}
+
+.example-image {
   margin-left: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.5);
 }

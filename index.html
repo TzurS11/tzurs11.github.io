@@ -55,8 +55,41 @@
       </table>
     </div>
     <div>
-      <p class="sub-title discord">Discord Projects</p>
-      <img id="latestmap" src="" />
+      <p
+        id="discord-projects-title"
+        class="sub-title discord"
+        onclick="discordBots()"
+      >
+        Discord Bots <span class="scaleArrow">►</span>
+      </p>
+      <div style="display: none" id="discord-bots" class="discord-bots">
+        <div class="bot-container ytcord">
+          <a
+            title="Open github repo"
+            class="link"
+            target="_blank"
+            href="https://github.com/TzurS11/ytCord"
+          >
+            <p class="bot-title">ytCord</p>
+            <p class="bot-description">
+              Download youtube songs through discord
+            </p>
+          </a>
+        </div>
+        <div class="bot-container playground">
+          <a
+            title="Open github repo"
+            class="link"
+            target="_blank"
+            href="https://github.com/TzurS11/playground"
+          >
+            <p class="bot-title">playground</p>
+            <p class="bot-description">
+              A lightweight bot for starting discord voice channel activities
+            </p>
+          </a>
+        </div>
+      </div>
     </div>
     <footer class="footer">©TzurS11</footer>
   </body>
