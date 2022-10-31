@@ -1,6 +1,6 @@
-html {
+/* html {
   height: 100%;
-}
+} */
 
 body {
   /* overflow: scroll; */
@@ -21,6 +21,7 @@ p {
   margin: 0px;
   font-family: "Bebas Neue";
   font-weight: bold;
+  color: white;
 }
 
 a {
@@ -44,6 +45,7 @@ header {
 }
 
 header > .title {
+  /* filter: invert(1); */
   position: relative;
   display: block;
   text-align: center;
@@ -54,6 +56,7 @@ header > .title:hover {
   letter-spacing: 10px;
 }
 header > a > .icon {
+  /* filter: invert(1); */
   position: absolute;
   margin-top: 10px;
   top: 0;
@@ -68,10 +71,11 @@ header > a > .icon.youtube {
 }
 
 header > a > .icon:active {
-  top: 15px;
+  top: 5px;
 }
 
 .sub-title {
+  /* display: block; */
   user-select: none;
   font-size: 50px;
   margin-left: 10px;
@@ -115,9 +119,7 @@ th {
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-color: rgba(0, 0, 0, 0.1);
   border-width: 1px;
-  border-style: solid;
   border-radius: 5px;
 }
 
@@ -161,23 +163,20 @@ tr:nth-child(even) {
   overflow: auto;
   display: inline-block;
   border-radius: 10px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.25);
+  /* border-style: solid; */
+  /* border-color: rgba(0, 0, 0, 0.25); */
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
 }
 .bot-title {
   white-space: nowrap;
   font-size: 35px;
+  letter-spacing: 10px;
+  text-align: center;
 }
 
 .bot-description {
   font-size: 20px;
-}
-
-.example-image {
-  margin-left: 10px;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  text-align: center;
 }
