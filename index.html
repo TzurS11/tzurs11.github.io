@@ -46,13 +46,8 @@
       <p id="map-title" class="sub-title beatsaber" title="Show maps">
         Loading maps
       </p>
-      <table id="map-table" class="map-table" style="display: none">
-        <tr style="font-size: 30px; font-weight: bolder; letter-spacing: 0px">
-          <th>Name</th>
-          <th>Votes Ratio</th>
-          <th>ID</th>
-        </tr>
-      </table>
+      <br / >
+      <div id="map-table" class="map-table" style="display: none"></div>
     </div>
     <div>
       <p
@@ -63,31 +58,21 @@
         Discord Bots <span class="scaleArrow">►</span>
       </p>
       <div style="display: none" id="discord-bots" class="discord-bots">
-        <div class="bot-container ytcord">
-          <a
-            title="Open github repo"
-            class="link"
-            target="_blank"
-            href="https://github.com/TzurS11/ytCord"
-          >
-            <p class="bot-title">ytCord</p>
-            <p class="bot-description">
-              Download youtube songs through discord
-            </p>
-          </a>
+        <div
+          onclick='openInNewTab("https://github.com/TzurS11/ytCord")'
+          class="bot-container ytcord"
+        >
+          <p class="bot-title">ytCord</p>
+          <p class="bot-description">Download youtube songs through discord</p>
         </div>
-        <div class="bot-container playground">
-          <a
-            title="Open github repo"
-            class="link"
-            target="_blank"
-            href="https://github.com/TzurS11/playground"
-          >
-            <p class="bot-title">playground</p>
-            <p class="bot-description">
-              A lightweight bot for starting discord voice channel activities
-            </p>
-          </a>
+        <div
+          onclick='openInNewTab("https://github.com/TzurS11/playground")'
+          class="bot-container playground"
+        >
+          <p class="bot-title">playground</p>
+          <p class="bot-description">
+            A lightweight bot for starting discord voice channel activities
+          </p>
         </div>
       </div>
     </div>

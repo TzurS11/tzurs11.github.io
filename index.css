@@ -151,13 +151,39 @@ tr:nth-child(even) {
   -webkit-text-stroke-color: black;
 }
 
-.bot-container {
+.map-container {
+  cursor: pointer;
   margin-left: 20px;
   overflow: auto;
   display: inline-block;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.3);
   padding: 20px;
+  margin-bottom: 20px;
+}
+
+.map-title {
+  /* white-space: nowrap; */
+  font-size: 35px;
+  /* letter-spacing: 10px; */
+  text-align: center;
+}
+
+.map-description {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.bot-container {
+  cursor: pointer;
+  margin-left: 20px;
+  overflow: auto;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .bot-title {
