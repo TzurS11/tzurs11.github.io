@@ -78,7 +78,7 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
     });
     let maxmaps = 0;
     orderedMaps.forEach((map) => {
-      if (maxmaps < 10) {
+      if (maxmaps < 100) {
         maxmaps++;
         let mapContainer = document.createElement("div");
         mapContainer.className = "maps";
@@ -88,12 +88,16 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
           `openInNewTab("beatsaver://${map.id}",false)`
         );
         mapContainer.title = "One-click install";
-        mapContainer.className = "map-container";
+        mapContainer.className = "container map-container";
         mapContainer.innerHTML = `<img class="map-background-image" src="${
           map.versions[0].coverURL
         }"><p class='map-title'>${map.name
           .replace(/(\(Chroma\)|\(Modchart\))/g, "")
-          .trim()}</p>`;
+          .trim()}</p><p class="map-description">${calcRating(
+          map.stats.upvotes,
+          map.stats.downvotes,
+          1
+        )}</p>`;
         document.getElementById("map-table").appendChild(mapContainer);
         sum[0] += map.stats.upvotes;
         sum[1] += map.stats.downvotes;
@@ -105,3 +109,24 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
     title.style.cursor = "pointer";
     title.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
   });
+
+// var Socket = new WebSocket("wss://scoresaber.com/ws");
+// function connect() {
+//   // Open WebSocket to ScoreSaber
+//   Socket.onopen = function (event) {
+//     //When socket is open, do this
+//     console.log("Websocket open"); // log that the connection was made
+//   };
+// }
+// connect();
+
+// Socket.onmessage = async function (event) {
+//   if (event.data !== "Connected to the ScoreSaber WSS") {
+//     jsonObj = JSON.parse(event.data);
+//     if (jsonObj.commandName === "score") {
+//       document.getElementById(
+//         "scoreSub"
+//       ).innerHTML = `${jsonObj.commandData.leaderboard.songAuthorName} - ${jsonObj.commandData.leaderboard.songName} by ${jsonObj.commandData.leaderboard.levelAuthorName}`;
+//     }
+//   }
+// };
