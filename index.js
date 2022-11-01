@@ -77,23 +77,25 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
         calcRating(a.stats.upvotes, a.stats.downvotes, 5)
       );
     });
-    // let maxmaps = 0;
+    let maxmaps = 0;
     orderedMaps.forEach((map) => {
-      // if (maxmaps < 7) {
-      //   maxmaps++;
+      if (maxmaps < 10) {
+        maxmaps++;
       let mapContainer = document.createElement("div");
       mapContainer.className = "maps";
+      mapContainer.style.backgroundPositionY = `${Math.random() * 100}%`;
+      // mapContainer.style.backgroundImage = `url(${map.versions[0].coverURL})`;
       mapContainer.setAttribute(
         "onclick",
         `openInNewTab("https://www.beatsaver.com/maps/${map.id}")`
       );
-      mapContainer.title="open in beatsaver"
+      mapContainer.title = "open in beatsaver";
       mapContainer.className = "map-container";
-      mapContainer.innerHTML = `<p class='map-title'>${map.name}</p>`;
+      mapContainer.innerHTML = `<img class="map-background-image" src="${map.versions[0].coverURL}"><p class='map-title'>${map.name.replace(/(\(Chroma\)|\(Modchart\))/g,"").trim()}</p>`;
       document.getElementById("map-table").appendChild(mapContainer);
       sum[0] += map.stats.upvotes;
       sum[1] += map.stats.downvotes;
-      // }
+      }
     });
     let title = document.getElementById("map-title");
     title.onclick = tableMap;
