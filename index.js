@@ -1,3 +1,11 @@
+function openInNewTab(url, newTab = true) {
+  if (newTab == true) {
+    window.open(url, "_blank").focus();
+  } else {
+    window.open(url, "_self").focus();
+  }
+}
+
 function tableMap() {
   let table = document.getElementById("map-table");
   let tableTitle = document.getElementById("map-title");
@@ -12,15 +20,6 @@ function tableMap() {
     tableTitle.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
   }
 }
-function openInNewTab(url) {
-  window.open(url, "_blank").focus();
-}
-
-// document.addEventListener("click", (ele) => {
-//   if (ele.target.className == "map-container")
-//     window.open(`https://beatsaver.com/maps/${ele.target.id}`);
-//   console.log(ele.target.id);
-// });
 
 function discordBots() {
   let projects = document.getElementById("discord-bots");
@@ -81,20 +80,23 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
     orderedMaps.forEach((map) => {
       if (maxmaps < 10) {
         maxmaps++;
-      let mapContainer = document.createElement("div");
-      mapContainer.className = "maps";
-      mapContainer.style.backgroundPositionY = `${Math.random() * 100}%`;
-      // mapContainer.style.backgroundImage = `url(${map.versions[0].coverURL})`;
-      mapContainer.setAttribute(
-        "onclick",
-        `openInNewTab("https://www.beatsaver.com/maps/${map.id}")`
-      );
-      mapContainer.title = "open in beatsaver";
-      mapContainer.className = "map-container";
-      mapContainer.innerHTML = `<img class="map-background-image" src="${map.versions[0].coverURL}"><p class='map-title'>${map.name.replace(/(\(Chroma\)|\(Modchart\))/g,"").trim()}</p>`;
-      document.getElementById("map-table").appendChild(mapContainer);
-      sum[0] += map.stats.upvotes;
-      sum[1] += map.stats.downvotes;
+        let mapContainer = document.createElement("div");
+        mapContainer.className = "maps";
+        // mapContainer.style.backgroundImage = `url(${map.versions[0].coverURL})`;
+        mapContainer.setAttribute(
+          "onclick",
+          `openInNewTab("beatsaver://${map.id}",false)`
+        );
+        mapContainer.title = "One-click install";
+        mapContainer.className = "map-container";
+        mapContainer.innerHTML = `<img class="map-background-image" src="${
+          map.versions[0].coverURL
+        }"><p class='map-title'>${map.name
+          .replace(/(\(Chroma\)|\(Modchart\))/g, "")
+          .trim()}</p>`;
+        document.getElementById("map-table").appendChild(mapContainer);
+        sum[0] += map.stats.upvotes;
+        sum[1] += map.stats.downvotes;
       }
     });
     let title = document.getElementById("map-title");
