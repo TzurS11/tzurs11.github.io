@@ -1,7 +1,3 @@
-function openInNewTab(url) {
-  window.open(url, "_blank").focus();
-}
-
 function tableMap() {
   let table = document.getElementById("map-table");
   let tableTitle = document.getElementById("map-title");
@@ -16,12 +12,15 @@ function tableMap() {
     tableTitle.innerHTML = 'Beat Saber Maps <span class="scaleArrow">►</span>';
   }
 }
+function openInNewTab(url) {
+  window.open(url, "_blank").focus();
+}
 
-document.addEventListener("click", (ele) => {
-  if (ele.target.className == "map-container")
-    window.open(`https://beatsaver.com/maps/${ele.target.id}`);
-  console.log(ele.target.id);
-});
+// document.addEventListener("click", (ele) => {
+//   if (ele.target.className == "map-container")
+//     window.open(`https://beatsaver.com/maps/${ele.target.id}`);
+//   console.log(ele.target.id);
+// });
 
 function discordBots() {
   let projects = document.getElementById("discord-bots");
@@ -39,6 +38,7 @@ function discordBots() {
 }
 
 function hideSubs() {
+  // return;
   let table = document.getElementById("map-table");
   let tableTitle = document.getElementById("map-title");
   table.style.display = "none";
@@ -83,9 +83,13 @@ fetch("https://api.beatsaver.com/maps/uploader/4284455/0")
       //   maxmaps++;
       let mapContainer = document.createElement("div");
       mapContainer.className = "maps";
-      mapContainer.id = map.id;
+      mapContainer.setAttribute(
+        "onclick",
+        `openInNewTab("https://www.beatsaver.com/maps/${map.id}")`
+      );
+      mapContainer.title="open in beatsaver"
       mapContainer.className = "map-container";
-      mapContainer.innerHTML = `<a class="link" target='_blank' href="https://beatsaver.com/maps/${map.id}"><p class='map-title'>${map.name}</p></a>`;
+      mapContainer.innerHTML = `<p class='map-title'>${map.name}</p>`;
       document.getElementById("map-table").appendChild(mapContainer);
       sum[0] += map.stats.upvotes;
       sum[1] += map.stats.downvotes;
